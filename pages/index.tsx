@@ -1,6 +1,6 @@
-import Typography from '../src/components/Typography/Typography';
 import Head from '../src/infra/components/Head/index';
 import Header from '../src/components/Header/Header';
+import Hero from '../src/components/Hero/Hero';
 import Footer from '../src/components/Footer/Footer';
 
 const Home = () => {
@@ -9,9 +9,7 @@ const Home = () => {
       <Head title="Leadster" />
       <Header />
       <main>
-        <Typography tag="p" size="xlarge">
-          Main
-        </Typography>
+        <Hero />
       </main>
       <Footer />
     </>
