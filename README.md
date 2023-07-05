@@ -1,6 +1,6 @@
 # Desafio Front-End Leadster
 
-Minha resolução do desafio da líder em Marketing Conversacional no Brasil (pros íntimos, [Leadster](https://leadster.com.br/) ☺️). Feito com Next.Js e Styled Components.
+Minha resolução do desafio da líder em Marketing Conversacional no Brasil (pros íntimos, [Leadster](https://leadster.com.br/) ☺️). Feito com Next.Js e Styled Components. Em andamento. Previsão de término: 12/07/2023 (7 dias).
 
 ## Pré-requisitos
 
