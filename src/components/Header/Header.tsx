@@ -1,10 +1,16 @@
-import Typography from '../Typography/Typography';
-
+import Logo from '../Logo/Logo';
+import Link from 'next/link';
+import Wrapper from '../Wrapper/Wrapper';
+import * as Styled from './styles';
 const Header = () => {
   return (
-    <Typography size="huge" tag="h1" fontWeight={700}>
-      Header
-    </Typography>
+    <Styled.Header>
+      <Wrapper>
+        <Link href="/">
+          <Logo />
+        </Link>
+      </Wrapper>
+    </Styled.Header>
   );
 };
 
