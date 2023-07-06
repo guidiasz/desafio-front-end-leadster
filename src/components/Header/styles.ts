@@ -10,7 +10,4 @@ export const Header = styled(Wrapper).attrs({ as: 'header' })`
     padding-top: 2.733rem;
     padding-bottom: 2.96rem;
   }
-  a {
-    cursor: pointer;
-  }
 `;
