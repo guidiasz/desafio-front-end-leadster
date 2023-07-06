@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const svgrOptions = require('./svgr.config');
 
 const nextConfig = {
   reactStrictMode: true,
@@ -22,7 +23,12 @@ const nextConfig = {
         test: /\.svg$/i,
         issuer: /\.[jt]sx?$/,
         resourceQuery: { not: /url/ }, // exclude if *.svg?url
-        use: ['@svgr/webpack'],
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: svgrOptions,
+          },
+        ],
       },
     );
 
