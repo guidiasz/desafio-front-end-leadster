@@ -4,6 +4,7 @@ import theme from './src/styles/theme';
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
+      black: string;
       white: string;
       gray50: string;
       gray100: string;
@@ -45,8 +46,22 @@ declare module 'styled-components' {
     bgColor?: keyof typeof theme.colors;
   }
 
+  export interface ContainerProps {
+    children: React.ReactNode;
+  }
+
   export interface HrProps {
     bgColor?: keyof typeof theme.colors;
     maxWidth?: string;
+  }
+
+  export interface NavLink {
+    title: string;
+    url: string;
+  }
+
+  export interface NavProps {
+    title: string;
+    links: NavLink[];
   }
 }
