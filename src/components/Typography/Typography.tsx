@@ -1,7 +1,7 @@
 import * as Styled from './styles';
 import { TypographyProps } from 'styled-components';
 
-const Typography = ({
+const Typography: React.FC<TypographyProps> = ({
   size = 'normal',
   colorName = 'gray700',
   fontWeight = 500,
@@ -9,7 +9,7 @@ const Typography = ({
   tag = 'p',
   uppercase = false,
   children,
-}: TypographyProps) => {
+}) => {
   return (
     <Styled.Typography
       size={size}

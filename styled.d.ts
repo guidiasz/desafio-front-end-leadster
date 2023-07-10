@@ -37,10 +37,6 @@ declare module 'styled-components' {
     children: React.ReactNode;
   }
 
-  export interface BadgeProps {
-    children: React.ReactNode;
-  }
-
   export interface WrapperProps {
     children: React.ReactNode;
     bgColor?: keyof typeof theme.colors;
@@ -53,15 +49,5 @@ declare module 'styled-components' {
   export interface HrProps {
     bgColor?: keyof typeof theme.colors;
     maxWidth?: string;
-  }
-
-  export interface NavLink {
-    title: string;
-    url: string;
-  }
-
-  export interface NavProps {
-    title: string;
-    links: NavLink[];
   }
 }

@@ -1,6 +1,6 @@
 import { Logo as LogoSVG } from '../Svgs/svgs';
 import * as Styled from './styles';
-const Logo = () => {
+const Logo: React.FC = () => {
   return (
     <Styled.Logo title="Leadster">
       <LogoSVG />

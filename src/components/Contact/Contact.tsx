@@ -2,7 +2,7 @@ import Typography from '../Typography/Typography';
 import SocialSection from './SocialSection';
 import * as Styled from './styles';
 
-const Contact = () => {
+const Contact: React.FC = () => {
   return (
     <Styled.Contact>
       <Typography size="normal" fontWeight={700} tag="h3" colorName={'gray700'}>

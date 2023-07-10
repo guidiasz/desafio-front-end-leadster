@@ -1,8 +1,8 @@
 import React from 'react';
-import { ContainerProps } from 'styled-components';
 import * as Styled from './styles';
+import { ContainerProps } from 'styled-components';
 
-const Container = ({ children }: ContainerProps) => {
+const Container: React.FC<ContainerProps> = ({ children }) => {
   return <Styled.Container>{children}</Styled.Container>;
 };
 

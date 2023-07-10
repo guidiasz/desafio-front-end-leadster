@@ -7,7 +7,7 @@ import NavSection from '../Nav/NavSection';
 import LogoWithSlogan from '../Logo/LogoWithSlogan';
 import { navList } from './navList';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <Styled.Footer>
       <Styled.LogoWrapper>

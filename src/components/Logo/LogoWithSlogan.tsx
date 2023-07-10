@@ -2,7 +2,7 @@ import Typography from '../Typography/Typography';
 import Logo from './Logo';
 import * as Styled from './styles';
 
-const LogoWithSlogan = () => {
+const LogoWithSlogan: React.FC = () => {
   return (
     <Styled.LogoWithSlogan>
       <Logo />

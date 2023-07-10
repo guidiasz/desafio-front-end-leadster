@@ -1,10 +1,12 @@
-import Link from 'next/link';
-import Typography from '../Typography/Typography';
 import * as Styled from './styles';
 import NavLink from './NavLink';
-import { NavProps } from 'styled-components';
+import { NavProps } from './interfaces';
 
-const Nav = ({ nav }: { nav: NavProps }) => {
+interface Nav {
+  nav: NavProps;
+}
+
+const Nav: React.FC<Nav> = ({ nav }) => {
   return (
     <Styled.Nav>
       <Styled.NavTitle size="normal" fontWeight={700} tag="h3" colorName={'gray700'}>

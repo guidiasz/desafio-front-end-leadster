@@ -2,7 +2,7 @@ import SocialIcon from './SocialIcon';
 import * as Styled from './styles';
 import { Facebook, Instagram, Linkedin } from '../Svgs/svgs';
 
-const SocialSection = () => {
+const SocialSection: React.FC = () => {
   return (
     <Styled.Section>
       <a

@@ -2,7 +2,7 @@ import Logo from '../Logo/Logo';
 import Link from 'next/link';
 import Wrapper from '../Wrapper/Wrapper';
 import * as Styled from './styles';
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <Styled.Header>
       <Wrapper>

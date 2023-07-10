@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Typography from '../Typography/Typography';
 import * as Styled from './styles';
 
-const Info = () => {
+const Info: React.FC = () => {
   return (
     <Styled.Info>
       <Styled.Col>

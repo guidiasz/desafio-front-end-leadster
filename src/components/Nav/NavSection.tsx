@@ -1,9 +1,13 @@
-import { NavProps } from 'styled-components';
+import { NavProps } from './interfaces';
 import Nav from './Nav';
 import * as Styled from './styles';
 import Contact from '../Contact/Contact';
 
-const NavSection = ({ navList }: { navList: NavProps[] }) => {
+interface NavSectionProps {
+  navList: NavProps[];
+}
+
+const NavSection: React.FC<NavSectionProps> = ({ navList }) => {
   return (
     <Styled.NavSection>
       {navList.map((nav) => (

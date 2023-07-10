@@ -5,7 +5,7 @@ import Wrapper from '../Wrapper/Wrapper';
 import Badge from '../Badge/Badge';
 import Hr from '../Hr/Hr';
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <Styled.Hero>
       <Wrapper bgColor={'gray100'}>

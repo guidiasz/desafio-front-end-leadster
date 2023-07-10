@@ -1,6 +1,11 @@
 import * as Styled from './styles';
+import React from 'react';
 
-const SocialIcon = ({ children }) => {
+interface SocialIconProps {
+  children: () => React.ReactNode;
+}
+
+const SocialIcon: React.FC<SocialIconProps> = ({ children }) => {
   return <Styled.Icon>{children()}</Styled.Icon>;
 };
 
