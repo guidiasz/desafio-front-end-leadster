@@ -20,5 +20,6 @@ export const Typography = styled.h1<TypographyProps>`
     ${getTitleCase(uppercase)};
     line-height: ${lineHeight};
     font-weight: ${fontWeight};
+    transition: 0.2s;
   `}
 `;
