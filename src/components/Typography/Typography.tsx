@@ -9,6 +9,7 @@ const Typography: React.FC<TypographyProps> = ({
   tag = 'p',
   uppercase = false,
   children,
+  id = '',
 }) => {
   return (
     <Styled.Typography
@@ -18,6 +19,7 @@ const Typography: React.FC<TypographyProps> = ({
       uppercase={uppercase}
       as={tag}
       colorName={colorName}
+      id={id}
     >
       {children}
     </Styled.Typography>
