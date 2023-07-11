@@ -61,7 +61,7 @@ export const Thumb = styled.div`
       z-index: 101;
       position: absolute;
       opacity: 0;
-      background-image: url('./imgs/play.svg');
+      background-image: url('../imgs/icons/play.svg');
       background-repeat: no-repeat;
       background-position: center;
       transition: 0.2s;

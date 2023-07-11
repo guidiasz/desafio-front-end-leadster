@@ -76,7 +76,7 @@ export const Select = styled(FilterButton)`
       user-select: none;
     }
     &:after {
-      background: url('./imgs/arrow.svg');
+      background: url('./imgs/icons/arrow.svg');
       content: '';
       background-size: contain;
       background-repeat: no-repeat;
