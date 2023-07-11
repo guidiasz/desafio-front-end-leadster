@@ -34,7 +34,7 @@ textarea {
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
-a {
+a, button {
     cursor: pointer;
 }
 `;
