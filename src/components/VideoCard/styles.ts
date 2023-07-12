@@ -4,8 +4,18 @@ import { Hr } from '../Hr/styles';
 import { Typography } from '../Typography/styles';
 
 export const Separator = styled(Hr)`
-  margin-top: 4.8rem;
-  margin-bottom: 2rem;
+  ${({ theme }) => css`
+    & {
+      margin-top: 4.8rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: ${theme.breakpoints.tablet}) {
+      & {
+        margin-top: 2rem;
+      }
+    }
+  `}
 `;
 export const Pagination = styled.div`
   & {
@@ -120,5 +130,31 @@ export const VideoCardSection = styled.section`
     grid-template-columns: repeat(3, 360px);
     gap: 2rem;
     align-items: stretch;
+  }
+  @media (max-width: 1180px) {
+    & {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+  }
+  @media (max-width: 1080px) {
+    & {
+      grid-template-columns: repeat(2, 360px);
+      gap: 2rem;
+      justify-content: center;
+    }
+  }
+  @media (max-width: 780px) {
+    & {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 680px) {
+      grid-template-columns: repeat(1, 360px);
+    }
+    ${({ theme }) => css`
+      @media (max-width: ${theme.breakpoints.phone}) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    `}
   }
 `;

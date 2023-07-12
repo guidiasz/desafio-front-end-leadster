@@ -3,8 +3,15 @@ import { Container } from '../Container/styles';
 import { Hr } from '../Hr/styles';
 
 export const VideoGalery = styled(Container)`
-  max-width: 1140px;
-  padding: 6.1rem 0;
+  ${({ theme }) => css`
+    & {
+      max-width: 1140px;
+      padding: 6.1rem 0;
+    }
+    @media (max-width: ${theme.breakpoints.notebook}) {
+      padding: 5rem 2rem;
+    }
+  `}
 `;
 export const Separator = styled(Hr)`
   ${({ theme }) => css`

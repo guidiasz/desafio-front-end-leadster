@@ -3,6 +3,11 @@ import theme from './src/styles/theme';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
+    breakpoints: {
+      notebook: string;
+      tablet: string;
+      phone: string;
+    };
     colors: {
       black: string;
       white: string;
@@ -18,6 +23,7 @@ declare module 'styled-components' {
     };
     scaleUpAnimation: FlattenSimpleInterpolation;
     outline: string;
+
     fontSizes: {
       xsmall: string;
       small: string;

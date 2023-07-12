@@ -3,6 +3,7 @@ import { Wrapper } from '../Wrapper/styles';
 import { Hr } from '../Hr/styles';
 import { Typography } from '../Typography/styles';
 import { Container } from '../Container/styles';
+import { Button } from '../Button/styles';
 
 export const Cta = styled(Wrapper)`
   ${({ theme }) => css`
@@ -19,6 +20,51 @@ export const Cta = styled(Wrapper)`
       align-items: center;
       padding: 0;
       max-width: 1480px;
+    }
+    @media (max-width: ${theme.breakpoints.notebook}) {
+      ${Container} {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+      ${Invitation} {
+        padding-right: 0;
+        padding-left: 1rem;
+      }
+    }
+    @media (max-width: 1090px) {
+      ${Container} {
+        max-width: 720px;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      ${Invitation} {
+        padding-left: 0;
+        order: -1;
+        text-align: center;
+      }
+      ${Buttons} {
+        justify-content: center;
+      }
+      ${AditionalInfo} {
+        justify-content: center;
+      }
+    }
+    @media (max-width: ${theme.breakpoints.phone}) {
+      ${Container} {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      ${AditionalInfo} {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      ${Buttons} {
+        flex-direction: column;
+        gap: 1rem;
+        ${Button}> ${Typography} {
+          font-size: ${theme.fontSizes.small};
+        }
+      }
     }
   `}
 `;

@@ -4,11 +4,35 @@ import { Typography } from '../Typography/styles';
 export const Filter = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: start;
+  ${({ theme }) => css`
+    @media (max-width: ${theme.breakpoints.tablet}) {
+      &{
+        align-items: center;
+        flex-direction: column;
+        gap: .5rem;
+      }
+  `}
 `;
 export const FilterButtonSection = styled.section`
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  gap: 0.9rem;
+  ${({ theme }) => css`
+    & {
+      display: grid;
+      grid-template-columns: repeat(5, auto);
+      gap: 0.9rem;
+      white-space: nowrap;
+    }
+    @media (max-width: 1080px) {
+      width: 50vw;
+      overflow-x: scroll;
+      padding-bottom: 1rem;
+    }
+    @media (max-width: ${theme.breakpoints.tablet}) {
+      & {
+        width: 100%;
+      }
+    }
+  `}
 `;
 
 export const FilterButton = styled.button`

@@ -10,10 +10,12 @@ export const Footer = styled.footer`
 
 export const Info = styled(Container)`
   & {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     padding-top: 2.5rem;
     padding-bottom: 2.6rem;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 `;
 export const LogoWrapper = styled(Wrapper)`

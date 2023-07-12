@@ -4,13 +4,25 @@ import { Contact } from '../Contact/styles';
 
 export const Nav = styled.nav``;
 export const NavSection = styled.section`
-  & {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  ${Nav}, ${Contact} {
-    padding: 0 0.8rem;
-  }
+  ${({ theme }) => css`
+    & {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    ${Nav}, ${Contact} {
+      padding: 0 0.8rem;
+    }
+    @media (max-width: ${theme.breakpoints.notebook}) {
+      & {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      & > * {
+        flex-basis: 280px;
+      }
+    }
+  `}
 `;
 export const NavTitle = styled(Typography)`
   & {
