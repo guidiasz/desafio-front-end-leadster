@@ -1,11 +1,4 @@
-export interface VideoProps {
-  thumb: string;
-  title: string;
-  id: string;
-  tags: string[];
-  views: number;
-  date: string;
-}
+import { VideoProps } from '../VideosContext/interfaces';
 
 export interface SortMap {
   [key: string]: (a: VideoProps, b: VideoProps) => number;
@@ -24,4 +17,8 @@ export interface FilterContextData {
   options: string[];
   onFilterChange: (tag: string) => void;
   onSortChange: (sort: string) => void;
+}
+
+export interface FilterProviderProps {
+  children: React.ReactNode;
 }

@@ -1,10 +1,10 @@
 import React from 'react';
-import { videos as videosList } from './videos';
-import { SortMap, FilterContextData } from './interfaces';
+import { SortMap, FilterContextData, FilterProviderProps } from './interfaces';
+import VideosContext from '../VideosContext/VideosContext';
 
 const FilterContext = React.createContext<FilterContextData>(undefined as any);
 
-export const FilterProvider = ({ children }) => {
+export const FilterProvider: React.FC<FilterProviderProps> = ({ children }) => {
   const sortMap: SortMap = {
     'Data de Publicação': (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
     Relevância: (a, b) => b.views - a.views,
@@ -17,9 +17,10 @@ export const FilterProvider = ({ children }) => {
   const [selectedFilter, setSelectedFilter] = React.useState('all');
   const [selectedSort, setSelectedSort] = React.useState(options[0]);
   const [currentPage, setCurrentPage] = React.useState(1);
+  const videosList = React.useContext(VideosContext).videos;
   const [videos, setVideos] = React.useState(videosList);
+
   React.useEffect(() => {
-    console.log(videos);
     onSortChange(options[0]);
   }, []);
 

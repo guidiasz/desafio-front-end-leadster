@@ -100,7 +100,14 @@ export const VideoCard = styled.button`
     &:focus {
       outline: ${theme.outline};
     }
-    ${'figcaption'} {
+
+    & {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    & figcaption {
       margin-top: 1.4rem;
       margin-bottom: 1.4rem;
       padding: 0 2rem;

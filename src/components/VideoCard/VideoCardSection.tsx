@@ -4,7 +4,10 @@ import { FilterContextData } from '../../context/FilterContext/interfaces';
 import VideoCard from './VideoCard';
 import * as Styled from './styles';
 import Pagination from './Pagination';
-import { VideoProps } from '../../context/FilterContext/interfaces';
+
+import VideoModal from '../VideoModal/VideoModal';
+import { ModalContext } from '../../context/ModalContext/ModalContext';
+import { VideoProps } from '../../context/VideosContext/interfaces';
 
 const VideoCardSection: React.FC = () => {
   function changePage({ currentTarget }: React.MouseEvent<HTMLButtonElement>) {
@@ -33,10 +36,12 @@ const VideoCardSection: React.FC = () => {
 
   const { videos, currentPage, setCurrentPage, videosPerPage } =
     React.useContext<FilterContextData>(FilterContext);
+  const { isOpen } = React.useContext(ModalContext);
   const numberOfPages = getNumberOfPages();
   return (
     <>
       <Styled.VideoCardSection>
+        {isOpen && <VideoModal />}
         {getVideosArr().map((video, index) => (
           <VideoCard key={`${index} ${video.id}`} video={video} />
         ))}

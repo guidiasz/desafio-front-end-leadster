@@ -2,6 +2,7 @@ import React from 'react';
 import * as Styled from './styles';
 import Typography from '../Typography/Typography';
 import FilterContext from '../../context/FilterContext/FilterContext';
+import { FilterContextData } from '../../context/FilterContext/interfaces';
 
 interface FilterButtonProps {
   value: string;
@@ -9,7 +10,7 @@ interface FilterButtonProps {
 }
 
 const FilterButton: React.FC<FilterButtonProps> = ({ value, handleFilterChange }) => {
-  const { selectedFilter } = React.useContext(FilterContext);
+  const { selectedFilter } = React.useContext<FilterContextData>(FilterContext);
 
   return (
     <Styled.FilterButton

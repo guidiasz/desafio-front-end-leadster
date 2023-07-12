@@ -1,17 +1,37 @@
+import { GetStaticProps } from 'next';
+import { VideoProps } from '../src/context/VideosContext/interfaces';
+import { getVideos } from '../api/getVideos';
 import Head from '../src/infra/components/Head/index';
 import Header from '../src/components/Header/Header';
 import Hero from '../src/components/Hero/Hero';
 import Footer from '../src/components/Footer/Footer';
 import VideoGalery from '../src/components/VideoGalery/VideoGalery';
+import { VideosProvider } from '../src/context/VideosContext/VideosContext';
 
-const Home: React.FC = () => {
+interface HomeProps {
+  videos: VideoProps[];
+}
+
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  const videos = await getVideos();
+
+  return {
+    props: {
+      videos,
+    },
+  };
+};
+
+const Home: React.FC<HomeProps> = ({ videos }) => {
   return (
     <>
       <Head title="Leadster" />
       <Header />
       <main>
         <Hero />
-        <VideoGalery />
+        <VideosProvider videosList={videos}>
+          <VideoGalery />
+        </VideosProvider>
       </main>
       <Footer />
     </>

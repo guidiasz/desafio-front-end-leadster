@@ -3,13 +3,14 @@ import * as Styled from './styles';
 import Typography from '../Typography/Typography';
 import Option from './Option';
 import FilterContext from '../../context/FilterContext/FilterContext';
+import { FilterContextData } from '../../context/FilterContext/interfaces';
 
 interface SelectProps {
   handleSortChange: (sort: string) => void;
 }
 
 const Select: React.FC<SelectProps> = ({ handleSortChange }) => {
-  const { selectedSort, options } = React.useContext(FilterContext);
+  const { selectedSort, options } = React.useContext<FilterContextData>(FilterContext);
   const optionsDiv = React.useRef(null);
   const select = React.useRef(null);
 

@@ -15,7 +15,7 @@ const Info: React.FC = () => {
           </Link>
         </Typography>
       </Styled.Col>
-      <Styled.Col as={'address'}>
+      <Styled.Col as="address">
         <Typography size="xsmall" fontWeight={400} tag="p" colorName="gray600">
           Rua José Loureiro, 464 - Centro - Curitiba PR - CEP: 80010-000 |{' '}
           <Link href="/">Termos de uso</Link>
