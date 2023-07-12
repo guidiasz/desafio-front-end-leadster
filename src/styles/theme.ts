@@ -1,4 +1,4 @@
-import { DefaultTheme } from 'styled-components';
+import { DefaultTheme, css } from 'styled-components';
 
 export const theme: DefaultTheme = {
   colors: {
@@ -15,6 +15,11 @@ export const theme: DefaultTheme = {
     hoverBorder: '#1857C1',
   },
   outline: '',
+  scaleUpAnimation: css`
+    opacity: 0;
+    transform: scale(0.8);
+    animation: scaleUp 0.3s forwards;
+  `,
   fontSizes: {
     xsmall: '.92rem',
     small: '1rem',

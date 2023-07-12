@@ -37,4 +37,12 @@ body {
 a, button {
     cursor: pointer;
 }
+
+@keyframes scaleUp {
+      to {
+        opacity: initial;
+        transform: initial;
+      }
+    }
+
 `;

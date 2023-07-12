@@ -9,7 +9,7 @@ function getFontSize(size: TypographyProps['size'], theme: DefaultTheme) {
 function getTitleCase(uppercase: boolean) {
   return css`
     text-transform: ${uppercase ? 'uppercase' : 'initial'};
-    letter-spacing: ${uppercase ? '1px' : 'initial'};
+    letter-spacing: ${uppercase ? '.012rem' : 'initial'};
   `;
 }
 

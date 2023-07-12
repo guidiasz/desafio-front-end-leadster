@@ -16,6 +16,7 @@ declare module 'styled-components' {
       primaryGradient: string;
       hoverBorder: string;
     };
+    scaleUpAnimation: FlattenSimpleInterpolation;
     outline: string;
     fontSizes: {
       xsmall: string;

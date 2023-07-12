@@ -7,6 +7,7 @@ import Hero from '../src/components/Hero/Hero';
 import Footer from '../src/components/Footer/Footer';
 import VideoGalery from '../src/components/VideoGalery/VideoGalery';
 import { VideosProvider } from '../src/context/VideosContext/VideosContext';
+import Cta from '../src/components/Cta/Cta';
 
 interface HomeProps {
   videos: VideoProps[];
@@ -32,6 +33,7 @@ const Home: React.FC<HomeProps> = ({ videos }) => {
         <VideosProvider videosList={videos}>
           <VideoGalery />
         </VideosProvider>
+        <Cta />
       </main>
       <Footer />
     </>

@@ -16,16 +16,19 @@ export const VideoModal = styled.div`
 
 export const Content = styled.div`
   ${({ theme }) => css`
-    margin: auto;
-    width: 100%;
-    max-width: 600px;
-    max-height: 90vh;
-    overflow-y: auto;
-    background-color: ${theme.colors.white};
-    border-radius: 1.1rem;
-    border-top: solid 5px ${theme.colors.primary};
-    padding-bottom: 1.6rem;
-    position: relative;
+    & {
+      margin: auto;
+      width: 100%;
+      max-width: 600px;
+      max-height: 90vh;
+      overflow-y: auto;
+      background-color: ${theme.colors.white};
+      border-radius: 1.1rem;
+      border-top: solid 5px ${theme.colors.primary};
+      padding-bottom: 1.6rem;
+      position: relative;
+      ${theme.scaleUpAnimation}
+    }
   `}
 `;
 
@@ -53,13 +56,16 @@ export const Downloads = styled.div`
   padding-top: 0.4rem;
 `;
 export const DownloadsCard = styled.div`
-  & ${Info} {
-    background: white;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding: 1rem;
-  }
+  ${({ theme }) => css`
+    & ${Info} {
+      background: white;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 1rem;
+      ${theme.scaleUpAnimation}
+    }
+  `}
   & ${Downloads} {
     display: flex;
     justify-content: start;
