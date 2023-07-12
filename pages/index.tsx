@@ -26,7 +26,10 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 const Home: React.FC<HomeProps> = ({ videos }) => {
   return (
     <>
-      <Head title="Leadster" />
+      <Head
+        title="Leadster: Chatbot de Marketing para Aumentar Geração de Leads"
+        description="Conheça a Leadster, um Chatbot de Marketing Conversacional para Aumentar a Geração de Leads Qualificados no seu Site. Visite e saiba mais!"
+      />
       <Header />
       <main>
         <Hero />
