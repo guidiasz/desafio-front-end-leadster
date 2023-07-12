@@ -1,17 +1,31 @@
 import styled, { css } from 'styled-components';
 import { Hr } from '../Hr/styles';
 import { Typography } from '../Typography/styles';
-import { ButtonProps } from './Button';
 
 export const VideoModal = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.4);
+  ${({ theme }) => css`
+    @media (max-width: ${theme.breakpoints.phone}) {
+      ${Title} {
+        padding: 2rem 2rem;
+      }
+      ${Downloads} {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+    }
+  `}
+
+  & {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 `;
 
 export const Content = styled.div`
@@ -64,6 +78,11 @@ export const DownloadsCard = styled.div`
       bottom: 0;
       padding: 1rem;
       ${theme.scaleUpAnimation}
+    }
+    @media (max-width: 1020px) {
+      & {
+        display: none;
+      }
     }
   `}
   & ${Downloads} {
