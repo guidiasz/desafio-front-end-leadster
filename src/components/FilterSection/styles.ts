@@ -30,7 +30,7 @@ export const FilterButton = styled.button`
       }
     }
     &:focus-visible {
-      outline: solid 1px ${theme.colors.gray600};
+      outline: ${theme.outline};
     }
     &.active {
       background: ${theme.colors.primary};

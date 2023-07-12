@@ -16,6 +16,7 @@ declare module 'styled-components' {
       primaryGradient: string;
       hoverBorder: string;
     };
+    outline: string;
     fontSizes: {
       xsmall: string;
       small: string;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Typography } from '../Typography/styles';
 import { Contact } from '../Contact/styles';
 
@@ -19,5 +19,19 @@ export const NavTitle = styled(Typography)`
 `;
 
 export const NavLink = styled.li`
-  margin-bottom: 2rem;
+  ${({ theme }) => css`
+    & {
+      margin-bottom: 2rem;
+      transition: 0.2;
+    }
+    &:hover,
+    & a:focus {
+      ${Typography} {
+        color: ${theme.colors.primary};
+      }
+    }
+    & a:focus {
+      outline: ${theme.outline};
+    }
+  `}
 `;

@@ -23,13 +23,20 @@ export const PageButton = styled.button`
       padding: 0.3rem 0.9rem 0.4rem;
       cursor: pointer;
       border: solid 0.1rem transparent;
+      transition: 0.2s;
     }
     &.active,
-    &:hover {
+    &:hover,
+    &:focus-visible {
       border-color: ${theme.colors.primary};
       border-radius: 5px;
       color: ${theme.colors.primary};
       font-weight: 700;
+    }
+    &:hover,
+    &:focus-visible {
+      background-color: ${theme.colors.gray100};
+      outline: ${theme.outline};
     }
   `}
 `;
@@ -68,7 +75,7 @@ export const Thumb = styled.div`
     }
   `}
 `;
-export const VideoCard = styled.figure`
+export const VideoCard = styled.button`
   ${({ theme }) => css`
     & {
       overflow: hidden;
@@ -77,7 +84,8 @@ export const VideoCard = styled.figure`
       height: 100%;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       ${Typography} {
         color: ${theme.colors.primary};
       }
@@ -87,6 +95,10 @@ export const VideoCard = styled.figure`
       ${Thumb}:before {
         opacity: 1;
       }
+    }
+
+    &:focus {
+      outline: ${theme.outline};
     }
     ${'figcaption'} {
       margin-top: 1.4rem;

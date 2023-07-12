@@ -17,10 +17,28 @@ export const Info = styled(Container)`
   }
 `;
 export const LogoWrapper = styled(Wrapper)`
-  padding: 3.6rem 0 3.1rem 0;
+  ${({ theme }) => css`
+    & {
+      padding: 3.6rem 0 3.1rem 0;
+    }
+    & a:focus {
+      outline: ${theme.outline};
+    }
+  `}
 `;
 
 export const Col = styled.div`
-  padding: 0 0.8rem;
-  word-spacing: 1px;
+  ${({ theme }) => css`
+    & {
+      padding: 0 0.8rem;
+      word-spacing: 1px;
+      transition: color 2s;
+    }
+
+    & a:hover,
+    & a:focus {
+      color: ${theme.colors.primary};
+      outline: ${theme.outline};
+    }
+  `}
 `;

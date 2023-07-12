@@ -14,6 +14,7 @@ export const theme: DefaultTheme = {
     primaryGradient: 'linear-gradient(45deg,#2C83FB 0%, #1F76F0 100%)',
     hoverBorder: '#1857C1',
   },
+  outline: '',
   fontSizes: {
     xsmall: '.92rem',
     small: '1rem',
@@ -25,3 +26,5 @@ export const theme: DefaultTheme = {
     huge: '5.83rem',
   },
 };
+
+theme.outline = `solid 2px ${theme.colors.primary}`;

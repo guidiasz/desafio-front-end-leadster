@@ -10,10 +10,13 @@ const Contact: React.FC = () => {
       </Typography>
       <SocialSection />
       <Typography tag="p" size={'small'} fontWeight={400}>
-        E-mail: <a href="mailto:contato@leadster.com.br">contato@leadster.com.br</a>
+        E-mail:{' '}
+        <Styled.ContactLink href="mailto:contato@leadster.com.br">
+          contato@leadster.com.br
+        </Styled.ContactLink>
       </Typography>
       <Typography tag="p" size={'small'} fontWeight={400}>
-        Telefone: <a href="tel:42988289851">(42) 98828-9851</a>
+        Telefone: <Styled.ContactLink href="tel:42988289851">(42) 98828-9851</Styled.ContactLink>
       </Typography>
     </Styled.Contact>
   );

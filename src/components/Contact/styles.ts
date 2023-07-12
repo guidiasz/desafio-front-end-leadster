@@ -14,17 +14,39 @@ export const Contact = styled.address`
       word-spacing: 2px;
       margin-bottom: 1.2rem;
     }
-
-    a {
+  `}
+`;
+export const ContactLink = styled.a`
+  ${({ theme }) => css`
+    & {
       color: ${theme.colors.gray600};
+      transition: color 0.2s;
+    }
+    &:hover,
+    &:focus {
+      color: ${theme.colors.primary};
+    }
+    &:focus {
+      outline: ${theme.outline};
     }
   `}
 `;
 
 export const Section = styled.section`
-  display: grid;
-  grid-template-columns: repeat(3, ${iconSize});
-  gap: 1rem;
+  ${({ theme }) => css`
+    & {
+      display: grid;
+      grid-template-columns: repeat(3, ${iconSize});
+      gap: 1rem;
+    }
+    & a:hover,
+    & a:focus {
+      ${Icon} {
+        color: ${theme.colors.white};
+        background: ${theme.colors.primary};
+      }
+    }
+  `}
 `;
 
 export const Icon = styled.i`
@@ -43,10 +65,6 @@ export const Icon = styled.i`
       align-items: center;
       color: ${theme.colors.gray600};
       transition: 0.2s linear;
-    }
-    &:hover {
-      color: ${theme.colors.white};
-      background: ${theme.colors.primary};
     }
   `}
 `;
