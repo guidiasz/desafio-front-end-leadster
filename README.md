@@ -2,6 +2,9 @@
 
 Minha resolução do desafio da líder em Marketing Conversacional no Brasil (pros íntimos, [Leadster](https://leadster.com.br/) ☺️). Feito com Next.Js e Styled Components. ~~Em andamento. Previsão de término: 12/07/2023 (7 dias).~~ Concluído em 12/07/2023
 
+## Veja o resultado
+https://leadster-challange.vercel.app/
+
 ## Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado as seguintes ferramentas:
