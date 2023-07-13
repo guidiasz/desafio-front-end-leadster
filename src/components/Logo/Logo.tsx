@@ -1,9 +1,18 @@
 import { Logo as LogoSVG } from '../Svgs/svgs';
 import * as Styled from './styles';
-const Logo: React.FC = () => {
+interface LogoProps {
+  animation: boolean;
+}
+const Logo: React.FC<LogoProps> = ({ animation = false }) => {
   return (
     <Styled.Logo title="Leadster">
-      <LogoSVG />
+      {animation ? (
+        <object type="image/svg+xml" data="/imgs/animated-logo.svg">
+          <LogoSVG />
+        </object>
+      ) : (
+        <LogoSVG />
+      )}
     </Styled.Logo>
   );
 };
