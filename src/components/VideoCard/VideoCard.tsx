@@ -17,7 +17,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
     <Styled.VideoCard value={video.id} onClick={handleClick}>
       <figure>
         <Styled.Thumb>
-          <img src={video.thumb} />
+          <img src={video.thumb} alt="" width="360" height="205.5" />
         </Styled.Thumb>
         <figcaption>
           <Typography fontWeight={700} size={'normal'}>

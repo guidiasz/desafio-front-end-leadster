@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
         <Typography tag="h2" size="xxlarge">
           Menos conversinha,
           <br />
-          <Typography tag="em" colorName="primary" size="huge" lineHeight={1}>
+          <Typography tag="em" colorName="primary" size="huge" fontWeight={700} lineHeight={1}>
             Mais Conversão
           </Typography>
         </Typography>

@@ -1,4 +1,3 @@
-import { table } from 'console';
 import styled, { css, TypographyProps, DefaultTheme } from 'styled-components';
 
 function adjustSize(size, sizeName, viewport) {
