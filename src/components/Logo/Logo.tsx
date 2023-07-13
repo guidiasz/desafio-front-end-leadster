@@ -1,7 +1,7 @@
 import { Logo as LogoSVG } from '../Svgs/svgs';
 import * as Styled from './styles';
 interface LogoProps {
-  animation: boolean;
+  animation?: boolean;
 }
 const Logo: React.FC<LogoProps> = ({ animation = false }) => {
   return (
