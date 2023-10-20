@@ -1,0 +1,29 @@
+{
+  "description": "Simple design tokens",
+  "items": {
+    "weight": {
+      "normal": 400,
+      "medium": 500,
+      "bold": 700
+    },
+    "leading": {
+      "tight": "1.2",
+      "normal": "1.5"
+    },
+    "measure": {
+      "long": "75ch",
+      "short": "65ch",
+      "compact": "35ch",
+      "title": "20ch"
+    },
+    "borderRadius": {
+      "small": "4px",
+      "medium": "8px",
+      "large": "16px"
+    },
+    "elevationShadow": {
+      "medium": "12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 100px 100px 80px rgba(0, 0, 0, 0.07)"
+    },
+    "screens": {}
+  }
+}

@@ -1,27 +1,29 @@
-import Link from 'next/link';
-import Container from '../Container/Container';
-import Hr from '../Hr/Hr';
-import * as Styled from './styles';
-import Info from './Info';
-import NavSection from '../Nav/NavSection';
-import LogoWithSlogan from '../Logo/LogoWithSlogan';
-import { navList } from './navList';
+import AnimatedLogo from '@/components/AnimatedLogo';
+import { Container, Flow, Region } from '@/components/CssUtilities';
+import FooterDetails from '@/components/Footer/FooterDetails';
+import Separator from '@/components/Separator';
+import React from 'react';
+import styled, { css } from 'styled-components';
+import FooterGrid from './FooterGrid';
 
-const Footer: React.FC = () => {
+type TFooter = React.ComponentProps<'footer'> & {};
+
+const Footer = ({ ...props }: TFooter) => {
   return (
-    <Styled.Footer>
-      <Styled.LogoWrapper>
-        <Link href="/">
-          <LogoWithSlogan />
-        </Link>
-      </Styled.LogoWrapper>
-      <Container>
-        <NavSection navList={navList} />
-      </Container>
-      <Hr bgColor={'gray50'} />
-      <Info />
-    </Styled.Footer>
+    <Wrapper {...props}>
+      <AnimatedLogo />
+      <FooterGrid />
+      <Separator />
+      <FooterDetails />
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.footer`
+  ${Container()}
+  ${Region()}
+  ${Flow({ flowSpace: 'xl' })}
+  ${({ theme }) => css``}
+`;
 
 export default Footer;
